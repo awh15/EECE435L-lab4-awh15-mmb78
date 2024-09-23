@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyqt_db_documented module &mdash; EECE 435 Lab 3 awh15 00.00.01 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pyqt_documented module" href="pyqt_documented.html" />
+    <link rel="prev" title="lab2" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EECE 435 Lab 3 awh15
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">lab2</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pyqt_db_documented module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.AssignInstructorsForm"><code class="docutils literal notranslate"><span class="pre">AssignInstructorsForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.AssignInstructorsForm.assign_instructor"><code class="docutils literal notranslate"><span class="pre">AssignInstructorsForm.assign_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.AssignInstructorsForm.setup_ui"><code class="docutils literal notranslate"><span class="pre">AssignInstructorsForm.setup_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.CourseForm"><code class="docutils literal notranslate"><span class="pre">CourseForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.CourseForm.add_course"><code class="docutils literal notranslate"><span class="pre">CourseForm.add_course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.CourseForm.setup_ui"><code class="docutils literal notranslate"><span class="pre">CourseForm.setup_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.create_action_buttons"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.create_action_buttons()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.delete_instructor"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.delete_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.delete_student"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.delete_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.edit_instructor"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.edit_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.edit_student"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.edit_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.load_courses"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.load_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.load_instructors"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.load_instructors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.load_students"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.load_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.search_courses"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.search_courses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.search_instructors"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.search_instructors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.search_students"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.search_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.setup_course_tab"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.setup_course_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.setup_instructor_tab"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.setup_instructor_tab()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.DisplayRecordsWindow.setup_student_tab"><code class="docutils literal notranslate"><span class="pre">DisplayRecordsWindow.setup_student_tab()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.EditInstructorDialog"><code class="docutils literal notranslate"><span class="pre">EditInstructorDialog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.EditInstructorDialog.accept"><code class="docutils literal notranslate"><span class="pre">EditInstructorDialog.accept()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.EditStudentDialog"><code class="docutils literal notranslate"><span class="pre">EditStudentDialog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.EditStudentDialog.accept"><code class="docutils literal notranslate"><span class="pre">EditStudentDialog.accept()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.InstructorForm"><code class="docutils literal notranslate"><span class="pre">InstructorForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.InstructorForm.add_instructor"><code class="docutils literal notranslate"><span class="pre">InstructorForm.add_instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.InstructorForm.setup_ui"><code class="docutils literal notranslate"><span class="pre">InstructorForm.setup_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.MainWindow"><code class="docutils literal notranslate"><span class="pre">MainWindow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.assign_instructors"><code class="docutils literal notranslate"><span class="pre">MainWindow.assign_instructors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.display_records"><code class="docutils literal notranslate"><span class="pre">MainWindow.display_records()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.export_csv"><code class="docutils literal notranslate"><span class="pre">MainWindow.export_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.init_ui"><code class="docutils literal notranslate"><span class="pre">MainWindow.init_ui()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.open_course_form"><code class="docutils literal notranslate"><span class="pre">MainWindow.open_course_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.open_instructor_form"><code class="docutils literal notranslate"><span class="pre">MainWindow.open_instructor_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.open_student_form"><code class="docutils literal notranslate"><span class="pre">MainWindow.open_student_form()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.MainWindow.register_students"><code class="docutils literal notranslate"><span class="pre">MainWindow.register_students()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.RegisterStudentsForm"><code class="docutils literal notranslate"><span class="pre">RegisterStudentsForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.RegisterStudentsForm.register_students"><code class="docutils literal notranslate"><span class="pre">RegisterStudentsForm.register_students()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.RegisterStudentsForm.setup_ui"><code class="docutils literal notranslate"><span class="pre">RegisterStudentsForm.setup_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.StudentForm"><code class="docutils literal notranslate"><span class="pre">StudentForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.StudentForm.add_student"><code class="docutils literal notranslate"><span class="pre">StudentForm.add_student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt_db_documented.StudentForm.setup_ui"><code class="docutils literal notranslate"><span class="pre">StudentForm.setup_ui()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyqt_db_documented.validate_email"><code class="docutils literal notranslate"><span class="pre">validate_email()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyqt_documented.html">pyqt_documented module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EECE 435 Lab 3 awh15</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">lab2</a></li>
+      <li class="breadcrumb-item active">pyqt_db_documented module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyqt_db_documented.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pyqt_db_documented">
+<span id="pyqt-db-documented-module"></span><h1>pyqt_db_documented module<a class="headerlink" href="#module-pyqt_db_documented" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.AssignInstructorsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">AssignInstructorsForm</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#AssignInstructorsForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.AssignInstructorsForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog window for assigning instructors to courses.</p>
+<p>This class provides a form with dropdowns to select an instructor and a course.
+It retrieves available instructors and courses from the database, displays them
+in <cite>QComboBox</cite> dropdowns, and assigns the selected instructor to the chosen course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.AssignInstructorsForm.assign_instructor">
+<span class="sig-name descname"><span class="pre">assign_instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#AssignInstructorsForm.assign_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.AssignInstructorsForm.assign_instructor" title="Link to this definition"></a></dt>
+<dd><p>Assigns the selected instructor to the selected course.</p>
+<p>This method retrieves the selected instructor ID and course ID from the
+dropdowns. It checks if both the instructor and course exist in the
+database, and if so, it updates the course record to assign the instructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>LookupError</strong> – If the selected instructor or course is invalid.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.AssignInstructorsForm.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#AssignInstructorsForm.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.AssignInstructorsForm.setup_ui" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the instructor assignment form.</p>
+<p>This method creates a form layout and adds dropdown fields for selecting
+an instructor and a course. The available instructors and courses are retrieved
+from the SQLite database and displayed in the <cite>QComboBox</cite> widgets. It also
+adds a button for submitting the form, which is connected to the
+<cite>assign_instructor()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.CourseForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">CourseForm</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#CourseForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.CourseForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog window for adding a course to the database.</p>
+<p>This class provides a form with fields for entering course details such as
+course ID and course name. It handles user input and adds the course
+to the SQLite database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.CourseForm.add_course">
+<span class="sig-name descname"><span class="pre">add_course</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#CourseForm.add_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.CourseForm.add_course" title="Link to this definition"></a></dt>
+<dd><p>Adds the course to the database.</p>
+<p>This method retrieves the values from the input fields, inserts the
+course details into the SQLite database, and commits the transaction.</p>
+<p>The course is added with a placeholder (<cite>None</cite>) for any additional course
+details that may be required later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.CourseForm.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#CourseForm.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.CourseForm.setup_ui" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the course form.</p>
+<p>This method creates a form layout and adds input fields for the course’s
+ID and name. It also adds a button for submitting the form, which is
+connected to the <cite>add_course()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">DisplayRecordsWindow</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A main window for displaying and managing records in the School Management System.</p>
+<p>This class provides a user interface for viewing and managing students, instructors,
+and courses. It includes tabs for each type of record, with search functionality and
+options to edit or delete entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QMainWindow</strong> – Inherits from QMainWindow to provide a main application window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.create_action_buttons">
+<span class="sig-name descname"><span class="pre">create_action_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edit_button</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_button</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.create_action_buttons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.create_action_buttons" title="Link to this definition"></a></dt>
+<dd><p>Creates a container for action buttons (edit and delete).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>edit_button</strong> – QPushButton for editing a record.</p></li>
+<li><p><strong>delete_button</strong> – QPushButton for deleting a record.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>QWidget containing the action buttons.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.delete_instructor">
+<span class="sig-name descname"><span class="pre">delete_instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.delete_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.delete_instructor" title="Link to this definition"></a></dt>
+<dd><p>Deletes the selected instructor record after user confirmation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> – The row data of the instructor to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.delete_student">
+<span class="sig-name descname"><span class="pre">delete_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.delete_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.delete_student" title="Link to this definition"></a></dt>
+<dd><p>Deletes the selected student record after user confirmation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> – The row data of the student to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.edit_instructor">
+<span class="sig-name descname"><span class="pre">edit_instructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.edit_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.edit_instructor" title="Link to this definition"></a></dt>
+<dd><p>Opens a dialog to edit the selected instructor record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> – The row data of the instructor to edit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.edit_student">
+<span class="sig-name descname"><span class="pre">edit_student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.edit_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.edit_student" title="Link to this definition"></a></dt>
+<dd><p>Opens a dialog to edit the selected student record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> – The row data of the student to edit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.load_courses">
+<span class="sig-name descname"><span class="pre">load_courses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.load_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.load_courses" title="Link to this definition"></a></dt>
+<dd><p>Loads course records from the database and populates the course table.</p>
+<p>This method executes a query to fetch all course records, clears the current
+table contents, and inserts the new data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.load_instructors">
+<span class="sig-name descname"><span class="pre">load_instructors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.load_instructors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.load_instructors" title="Link to this definition"></a></dt>
+<dd><p>Loads instructor records from the database and populates the instructor table.</p>
+<p>This method executes a query to fetch all instructor records, clears the current
+table contents, and inserts the new data along with action buttons for editing
+and deleting records.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.load_students">
+<span class="sig-name descname"><span class="pre">load_students</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.load_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.load_students" title="Link to this definition"></a></dt>
+<dd><p>Loads student records from the database and populates the student table.</p>
+<p>This method executes a query to fetch all student records, clears the current
+table contents, and inserts the new data along with action buttons for editing
+and deleting records.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.search_courses">
+<span class="sig-name descname"><span class="pre">search_courses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.search_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.search_courses" title="Link to this definition"></a></dt>
+<dd><p>Searches for courses based on the input in the search field.</p>
+<p>This method retrieves courses whose names or IDs match the search input and
+updates the course table to display the results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.search_instructors">
+<span class="sig-name descname"><span class="pre">search_instructors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.search_instructors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.search_instructors" title="Link to this definition"></a></dt>
+<dd><p>Searches for instructors based on the input in the search field.</p>
+<p>This method retrieves instructors whose names or IDs match the search input and
+updates the instructor table to display the results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.search_students">
+<span class="sig-name descname"><span class="pre">search_students</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.search_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.search_students" title="Link to this definition"></a></dt>
+<dd><p>Searches for students based on the input in the search field.</p>
+<p>This method retrieves students whose names or IDs match the search input and
+updates the student table to display the results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.setup_course_tab">
+<span class="sig-name descname"><span class="pre">setup_course_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.setup_course_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.setup_course_tab" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the courses tab.</p>
+<p>This method creates a layout with a search bar and a table to display course records.
+It populates the table with course data and connects the search functionality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.setup_instructor_tab">
+<span class="sig-name descname"><span class="pre">setup_instructor_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.setup_instructor_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.setup_instructor_tab" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the instructors tab.</p>
+<p>This method creates a layout with a search bar and a table to display instructor records.
+It populates the table with instructor data and connects the search functionality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.DisplayRecordsWindow.setup_student_tab">
+<span class="sig-name descname"><span class="pre">setup_student_tab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#DisplayRecordsWindow.setup_student_tab"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.DisplayRecordsWindow.setup_student_tab" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the students tab.</p>
+<p>This method creates a layout with a search bar and a table to display student records.
+It populates the table with student data and connects the search functionality.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.EditInstructorDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">EditInstructorDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instructor_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#EditInstructorDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.EditInstructorDialog" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog for editing instructor records.</p>
+<p>This class provides a user interface for editing instructor information, allowing
+the user to change the name and subject of a selected instructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog interface.</p></li>
+<li><p><strong>instructor_data</strong> – A tuple containing the current data of the instructor to be edited.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.EditInstructorDialog.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#EditInstructorDialog.accept"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.EditInstructorDialog.accept" title="Link to this definition"></a></dt>
+<dd><p>Updates the instructor record in the database with the new values from the input fields.</p>
+<p>This method is called when the user clicks the OK button. It executes an UPDATE
+query to change the name and subject of the instructor in the database based on the
+provided instructor ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.EditStudentDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">EditStudentDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">student_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#EditStudentDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.EditStudentDialog" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog for editing student records.</p>
+<p>This class provides a user interface for editing student information, allowing
+the user to change the name and age of a selected student.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog interface.</p></li>
+<li><p><strong>student_data</strong> – A tuple containing the current data of the student to be edited.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.EditStudentDialog.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#EditStudentDialog.accept"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.EditStudentDialog.accept" title="Link to this definition"></a></dt>
+<dd><p>Updates the student record in the database with the new values from the input fields.</p>
+<p>This method is called when the user clicks the OK button. It executes an UPDATE
+query to change the name and age of the student in the database based on the
+provided student ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.InstructorForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">InstructorForm</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#InstructorForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.InstructorForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog window for adding an instructor to the database.</p>
+<p>This class provides a form with fields for entering instructor details such as
+name, age, email, and instructor ID. It handles user input and adds the instructor
+to the SQLite database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.InstructorForm.add_instructor">
+<span class="sig-name descname"><span class="pre">add_instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#InstructorForm.add_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.InstructorForm.add_instructor" title="Link to this definition"></a></dt>
+<dd><p>Adds the instructor to the database.</p>
+<p>This method retrieves the values from the input fields, inserts the
+instructor details into the SQLite database, and commits the transaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the age input is not an integer.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.InstructorForm.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#InstructorForm.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.InstructorForm.setup_ui" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the instructor form.</p>
+<p>This method creates a form layout and adds input fields for the instructor’s
+name, age, email, and instructor ID. It also adds a button for submitting the
+form, which is connected to the <cite>add_instructor()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">MainWindow</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>Main application window for the School Management System.</p>
+<p>This class provides the main interface for the application, allowing users to
+perform various actions related to students, instructors, and courses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QMainWindow</strong> – Inherits from QMainWindow to provide the main window functionality.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.assign_instructors">
+<span class="sig-name descname"><span class="pre">assign_instructors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.assign_instructors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.assign_instructors" title="Link to this definition"></a></dt>
+<dd><p>Opens the dialog for assigning instructors to courses.</p>
+<p>This method creates an instance of the AssignInstructorsForm and displays it as a modal dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.display_records">
+<span class="sig-name descname"><span class="pre">display_records</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.display_records"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.display_records" title="Link to this definition"></a></dt>
+<dd><p>Opens the window for displaying student, instructor, and course records.</p>
+<p>This method creates an instance of the DisplayRecordsWindow and shows it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.export_csv">
+<span class="sig-name descname"><span class="pre">export_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.export_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.export_csv" title="Link to this definition"></a></dt>
+<dd><p>Exports the current records of students, instructors, and courses to a CSV file.</p>
+<p>This method generates a CSV file named “school_data.csv” containing the details of
+students, instructors, and courses, including enrolled students for each course.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.init_ui">
+<span class="sig-name descname"><span class="pre">init_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.init_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.init_ui" title="Link to this definition"></a></dt>
+<dd><p>Initializes the user interface components of the main window.</p>
+<p>This method sets up buttons for adding students, instructors, and courses,
+registering students, assigning instructors, displaying records, and exporting data to CSV.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.open_course_form">
+<span class="sig-name descname"><span class="pre">open_course_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.open_course_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.open_course_form" title="Link to this definition"></a></dt>
+<dd><p>Opens the dialog for adding a new course.</p>
+<p>This method creates an instance of the CourseForm and displays it as a modal dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.open_instructor_form">
+<span class="sig-name descname"><span class="pre">open_instructor_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.open_instructor_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.open_instructor_form" title="Link to this definition"></a></dt>
+<dd><p>Opens the dialog for adding a new instructor.</p>
+<p>This method creates an instance of the InstructorForm and displays it as a modal dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.open_student_form">
+<span class="sig-name descname"><span class="pre">open_student_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.open_student_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.open_student_form" title="Link to this definition"></a></dt>
+<dd><p>Opens the dialog for adding a new student.</p>
+<p>This method creates an instance of the StudentForm and displays it as a modal dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.MainWindow.register_students">
+<span class="sig-name descname"><span class="pre">register_students</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#MainWindow.register_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.MainWindow.register_students" title="Link to this definition"></a></dt>
+<dd><p>Opens the dialog for registering students to courses.</p>
+<p>This method creates an instance of the RegisterStudentsForm and displays it as a modal dialog.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.RegisterStudentsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">RegisterStudentsForm</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#RegisterStudentsForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.RegisterStudentsForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog window for registering students in courses.</p>
+<p>This class provides a form with dropdowns to select a student and a course.
+It retrieves available students and courses from the database, displays them
+in <cite>QComboBox</cite> dropdowns, and registers the selected student for the chosen course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.RegisterStudentsForm.register_students">
+<span class="sig-name descname"><span class="pre">register_students</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#RegisterStudentsForm.register_students"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.RegisterStudentsForm.register_students" title="Link to this definition"></a></dt>
+<dd><p>Registers the selected student for the selected course.</p>
+<p>This method retrieves the selected student ID and course ID from the
+dropdowns. It checks if the student and course exist in the database,
+and if so, it registers the student in the course by inserting a record
+into the <cite>student_courses</cite> table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>LookupError</strong> – If the selected student or course is invalid.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.RegisterStudentsForm.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#RegisterStudentsForm.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.RegisterStudentsForm.setup_ui" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the student registration form.</p>
+<p>This method creates a form layout and adds dropdown fields for selecting
+a student and a course. The available students and courses are retrieved
+from the SQLite database and displayed in the <cite>QComboBox</cite> widgets. It also
+adds a button for submitting the form, which is connected to the
+<cite>register_students()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqt_db_documented.StudentForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">StudentForm</span></span><a class="reference internal" href="_modules/pyqt_db_documented.html#StudentForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.StudentForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>A dialog window for adding a student to the database.</p>
+<p>This class provides a form with fields for entering student details such as
+name, age, email, and student ID. It handles user input and adds the student
+to the SQLite database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QDialog</strong> – Inherits from QDialog to provide a modal dialog window.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.StudentForm.add_student">
+<span class="sig-name descname"><span class="pre">add_student</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#StudentForm.add_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.StudentForm.add_student" title="Link to this definition"></a></dt>
+<dd><p>Adds the student to the database.</p>
+<p>This method retrieves the values from the input fields, inserts the
+student details into the SQLite database, and commits the transaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the age input is not an integer.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqt_db_documented.StudentForm.setup_ui">
+<span class="sig-name descname"><span class="pre">setup_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#StudentForm.setup_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.StudentForm.setup_ui" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the student form.</p>
+<p>This method creates a form layout and adds input fields for the student’s
+name, age, email, and student ID. It also adds a button for submitting the
+form, which is connected to the <cite>add_student()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyqt_db_documented.validate_email">
+<span class="sig-prename descclassname"><span class="pre">pyqt_db_documented.</span></span><span class="sig-name descname"><span class="pre">validate_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyqt_db_documented.html#validate_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqt_db_documented.validate_email" title="Link to this definition"></a></dt>
+<dd><p>Validates an email address format.</p>
+<p>This function checks if the given email address follows a valid pattern.
+The pattern allows alphanumeric characters, dots, and hyphens in the
+username and domain, and requires a top-level domain at the end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>email</strong> (<em>str</em>) – The email address to validate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A match object if the email is valid, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>re.Match or None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>re.error</strong> – If the regex pattern is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="lab2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pyqt_documented.html" class="btn btn-neutral float-right" title="pyqt_documented module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, awh15.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
